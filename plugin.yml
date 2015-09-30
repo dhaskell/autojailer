@@ -1,0 +1,60 @@
+main: me.cragnore.autojailer.main
+name: Autojailer
+version: 1.0
+author: cragnore
+description: A small extension of essentials used to create a soft whitelist.
+commands:
+  setJailMessage:
+    description: Set the message sent to players who are sent to jail.
+    usage: /setJailMessage Stop right there, criminal scum!
+  setfreedomMessage:
+    description: Set the message sent to players who are freed from jail.
+    usage: /setfreeMessage Don't let me catch you stealing anymore sweetrolls.
+  setFreedomLocation:
+    description: Set the location to which the player will be sent when released from jail to your current location. Default to world spawn.
+    usage: /setFreedomLocation
+  setvouchThreshold:
+    description: Set the number of 'vouches' a player needs from free players to be released from jail.
+    usage: /setvouchThreshold
+  vouch:
+    description: Put your honor on the line and vouch for a palyer to be released from jail.
+    usage: /vouch Notch
+  free:
+    description: Release a player from jail.
+    usage: /free Notch
+  jailertoggle:
+    description: Toggle the auto jailer. disabling it will cause it to ignore new players that login.
+    usage: /jailertoggle
+permissions:
+  autojailer.*:
+    default: op
+    description: Gives access to all Inferno commands
+    children:
+      autojailer.setJailMessage: true
+      autojailer.setfreedomMessage: true
+      autojailer.setFreedomLocation: true
+      autojailer.setvouchThreshold: true
+      autojailer.vouch: true
+      autojailer.free: true
+      autojailer.jailertoggle: true
+  autojailer.setJailMessage:
+    description: Gives access to set the message seen by jailed players
+    default: false
+  autojailer.setfreedomMessage:
+    description: Gives access to set the message seen by freed players
+    default: false
+  autojailer.setFreedomLocation:
+    description: Gives access to set the location where prisoners are sent when freed
+    default: false
+  autojailer.setvouchThreshold:
+    description: Gives access to set the number of vouches needed to free a player
+    default: false
+  autojailer.vouch:
+    description: Gives access to vouch for jailed players
+    default: false
+  autojailer.free:
+    description: Gives access to outright free an imprisoned person
+    default: false
+  autojailer.jailertoggle:
+    description: Toggle the auto jailer. disabling it will cause it to ignore new players that login
+    default: false
