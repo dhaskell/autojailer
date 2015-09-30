@@ -1,0 +1,1 @@
+# Autojailer Minecraft Spigot/Bukkit Plugin
