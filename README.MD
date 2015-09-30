@@ -6,4 +6,5 @@ Designed to work in tandem with [Bukkit Essentials](http://dev.bukkit.org/bukkit
 - New Commands
   - List players who vouched for X player
   - Revoke existing vouches / re-jail player
+  - Greater ability to modify configuration in game
 - Better exception handling
